@@ -1,41 +1,48 @@
-function start() {
-    document.getElementById('innerText').innerHTML="aaaaaa"
-}
-
+let colors = ["#D88C9A", "#99C1B9", "#8E7DBE", "#FF674D"]
 const phrases = ["a Brooklyn-based graphic designer", "Kanye West's biggest fan", 
-"looking for a job at the start of October","letting you download her PDF"] 
-
+"looking for a job at the start of October","letting you download her PDF"]; 
 var number = phrases.length
+let option = phrases[0]
+let counter = 0
+let color = 0
 
-/*
-function logPhrases() {
-    for (let i=0; i<number; i++) {
-        console.log(phrases[i])
-    }
+
+function start() {
+    document.getElementById('innerText').innerHTML=option
+    document.getElementById('circle').style.backgroundColor=colors[color]
 }
-*/
 
 function randomPhrase() {
-    /*
-    let prior = document.getElementById('innerText').innerHTML
-    */
     let current = document.getElementById('innerText').innerHTML
-    let option = Math.floor(Math.random() * number);
+    option = Math.floor(Math.random() * number);
     if (current == phrases[option]) {
         option = Math.floor(Math.random() * number);
     }
-    document.getElementById('innerText').innerHTML=phrases[option]
+    counter=option
+    updateSection()
 }
 
-/*descobrir o que ta escrito pra somar 1 complicado eheheh*/
+/*descobrir o que ta escrito pra somar 1*/
 function nextPhrase() {
-    let current = document.getElementById('innerText').innerHTML
-    let next = current+1
+    counter +=1
 
-    if (next>number) {
-        next=0
+    if (counter>phrases.length-1) {
+        counter=0
     }
+    updateSection()
+}
 
-    document.getElementById('innerText').innerHTML=phrases[next]
+function lastPhrase() {
+    counter -=1
 
+    if (counter<0) {
+        counter=phrases.length-1
+    }
+    updateSection()
+}
+
+function updateSection() {
+    color=counter
+    document.getElementById('innerText').innerHTML=phrases[counter]
+    document.getElementById('circle').style.backgroundColor=colors[color]
 }

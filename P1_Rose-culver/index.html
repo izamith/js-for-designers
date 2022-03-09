@@ -7,10 +7,10 @@
         <title>Rose Culver</title>
         <link rel="stylesheet" href="style.css">
     </head>
-    <body onload="randomPhrase()">
+    <body onload="start()">
         <section> 
-            <div class="centent">
-                <div class="circle"></div>
+            <div class="content">
+                <div id="circle"></div>
                 <div class="title">
                     <h3>Rose Culver is...</h3>
                 </div>
@@ -20,7 +20,7 @@
             </div>
 
             <div class="controls">
-                <img src="assets/img/prev.svg"/>
+                <img onclick="lastPhrase()" src="assets/img/prev.svg"/>
                 <img onclick="randomPhrase()" src="assets/img/random.svg"/>
                 <img onclick="nextPhrase()" src="assets/img/next.svg"/>
             </div>

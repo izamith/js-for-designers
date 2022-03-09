@@ -7,7 +7,29 @@ body {
     background-color: #edc7a9;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    
 }
+
+.content {
+    display: flex;
+    width: 80vw;
+    flex-direction: column;
+    height: 70vh;
+    padding-top: 5%
+}
+
+#circle,
+.title,
+.phrase {
+    align-self:center;
+}
+
+.phrase {
+   
+}
+
 
 h1 {
     font-size: 65px;
@@ -17,10 +39,9 @@ h3 {
     font-size: 24px;
 }
 
-.circle {
+#circle {
     height: 15px;
     width: 15px;
-    background-color: #555;
     border-radius: 50%;
 }
 
