@@ -1,0 +1,18 @@
+@font-face { font-family: Bluu; src: url('assets/font/Fonts/BluuNext-Bold.otf'); } 
+
+body {
+    font-family: Bluu;
+    text-align: center;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+.circle {
+    height: 15px;
+    width: 15px;
+    background-color: #555;
+    border-radius: 50%;
+}
+
